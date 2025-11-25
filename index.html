@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biovitta - Clínica integral de medicina e saúde em Sobradinho/DF. Mais de 40 convênios aceitos." />
+  <meta name="keywords" content="clínica médica, Sobradinho, convênios, cardiologia, ginecologia" />
+  <title>Biovitta Medicina & Saúde | Clínica Integral Sobradinho/DF</title>
+  <link rel="icon" href="assets/images/logo/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            azul: '#0066FF',
+            vermelho: '#CC0000',
+            branco: '#FFFFFF',
+            cinzaClaro: '#F5F5F5',
+            cinzaMedio: '#E0E0E0',
+            cinzaEscuro: '#333333',
+            azulClaro: '#E6F2FF',
+            vermelhoClaro: '#FFE6E6'
+          },
+          fontFamily: {
+            sans: ['Open Sans', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+<body class="bg-white text-[#333333] font-sans">
+  <!-- LOADING SPINNER -->
+  <div id="loader" class="fixed inset-0 z-[1200] grid place-items-center bg-white/95">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- BOTÕES FLUTUANTES -->
+  <a href="https://www.instagram.com/biovittams/" class="float-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://wa.me/5561993217218" class="float-btn whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <!-- SEÇÃO: HEADER -->
+  <header class="header fixed inset-x-0 top-0 z-[1000] bg-white shadow-sm transition-all">
+    <div class="container flex h-20 items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <img 
+          src="assets/images/logo/logo.png" 
+          alt="Logo Biovitta"
+          class="h-12 w-auto object-contain"
+        />
+        <div class="leading-tight">
+          <p class="text-[11px] uppercase tracking-[0.3em] text-[var(--azul-principal)]">Biovitta</p>
+          <p class="font-display text-lg font-semibold">Medicina & Saúde Integral</p>
+        </div>
+      </a>
+      <nav class="nav-menu hidden items-center gap-6 text-sm font-semibold md:flex">
+        <a href="#hero" class="nav-link">Início</a>
+        <a href="#especialidades" class="nav-link">Especialidades</a>
+        <a href="#convenios" class="nav-link">Convênios</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="https://www.instagram.com/biovittams/" class="text-[var(--azul-principal)]"><i class="fa-brands fa-instagram"></i></a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="menu-toggle md:hidden" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <button id="closeMobileMenu" aria-label="Fechar menu" class="close-btn">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <div class="mobile-links">
+        <a href="#hero">Início</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#convenios">Convênios</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </header>
+  <!-- FIM SEÇÃO: HEADER -->
+
+  <main id="top" class="pt-20">
+    <!-- SEÇÃO: HERO -->
+    <section id="hero" class="section hero" data-animate="fade-in">
+      <div class="container grid items-center gap-10 lg:grid-cols-2">
+        <div class="space-y-6" data-animate="slide-up">
+          <p class="sup-title">Bem-vindo à Biovitta</p>
+          <h1 class="hero-title">Excelência em Medicina & Saúde para Toda a Família</h1>
+          <h2 class="hero-sub">Mais de 40 convênios aceitos | Sobradinho/DF</h2>
+          <p class="hero-desc">Clínica integral com especialistas qualificados, equipamentos modernos e atendimento humanizado. Cuidamos de você com carinho e profissionalismo.</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="badge">40+ Convênios</span>
+            <span class="badge">10+ Especialidades</span>
+            <span class="badge">Equipe Qualificada</span>
+            
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/5561993217218" class="btn btn-primary ripple">Agendar Consulta</a>
+            <a href="#especialidades" class="btn btn-secondary ripple">Nossas Especialidades</a>
+          </div>
+        </div>
+        <div class="relative" data-animate="slide-right">
+          <div class="hero-visual">
+            <div class="pulse-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Equipe médica" class="hero-img" />
+            <div class="stats-card">
+              <div class="counter" data-target="40">0</div>
+              <p>Convênios aceitos</p>
+              <div class="progress"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator"><i class="fa-solid fa-chevron-down"></i></div>
+    </section>
+    <!-- FIM SEÇÃO: HERO -->
+
+    <!-- SEÇÃO: SOBRE -->
+    <section id="sobre" class="section" data-animate="fade-in">
+      <div class="container grid items-center gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+        <div class="space-y-4" data-animate="slide-left">
+          <p class="sup-title">Conheça a Biovitta</p>
+          <h2 class="section-title">Clínica Integral de Medicina e Saúde</h2>
+          <p class="text-body">A Biovitta é uma clínica médica integral localizada em Sobradinho/DF, comprometida em oferecer atendimento de excelência com humanização, tecnologia de ponta e profissionais altamente qualificados.</p>
+          <p class="text-body">Aceitamos mais de 40 convênios médicos para facilitar seu acesso à saúde de qualidade. Nossa missão é cuidar de você e sua família com carinho, ética e profissionalismo.</p>
+          <p class="text-body">Oferecemos consultas, exames e procedimentos em diversas especialidades médicas, com agendamento facilitado e atendimento personalizado.</p>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="sobre-card" data-animate="scale-up">
+              <div class="icon blue"><i class="fa-solid fa-id-card-clip"></i></div>
+              <h3>40+ Convênios Aceitos</h3>
+              <p>Facilitamos seu acesso à saúde</p>
+            </div>
+            <div class="sobre-card" data-animate="scale-up">
+              <div class="icon red"><i class="fa-solid fa-user-doctor"></i></div>
+              <h3>Equipe Qualificada</h3>
+              <p>Especialistas com vasta experiência</p>
+            </div>
+            <div class="sobre-card" data-animate="scale-up">
+              <div class="icon blue"><i class="fa-solid fa-microchip"></i></div>
+              <h3>Equipamentos Modernos</h3>
+              <p>Diagnósticos precisos e rápidos</p>
+            </div>
+            <div class="sobre-card" data-animate="scale-up">
+              <div class="icon red"><i class="fa-solid fa-hands-holding-heart"></i></div>
+              <h3>Atendimento Humanizado</h3>
+              <p>Cuidado individualizado e acolhedor</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-frame" data-animate="slide-right">
+          <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1000&q=80" alt="Recepção da clínica" />
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: SOBRE -->
+
+    <!-- SEÇÃO: ESPECIALIDADES -->
+    <section id="especialidades" class="section bg-[var(--cinza-claro)]" data-animate="fade-in">
+      <div class="container">
+        <div class="mb-10 max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">Nossas Especialidades Médicas</p>
+          <h2 class="section-title">Atendimento integral com especialistas qualificados</h2>
+          <p class="text-body">Equipe de referência em Neurologia, Neuropsicologia e cuidados integrais.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- 11 Cards -->
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-stethoscope"></i></div><h3>Clínica Médica</h3><p>Atendimento geral e preventivo</p><div class="price">R$ 99,00*</div><span class="badge-tag">#BemEstarParaVocê</span><button class="btn-outline blue ripple">Agendar</button></div>
+          <div class="esp-card red" data-animate="stagger"><div class="esp-icon red"><i class="fa-solid fa-heart-circle-bolt"></i></div><h3>Cardiologia</h3><p>Saúde do coração e sistema cardiovascular</p><div class="price">R$ 199,90*</div><small>Consulta + Eletrocardiograma</small><button class="btn-outline red ripple">Agendar</button></div>
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-venus"></i></div><h3>Ginecologia</h3><p>Cuidar da sua saúde íntima é amor-próprio</p><div class="price">R$ 120,00*</div><button class="btn-outline blue ripple">Agendar</button></div>
+          <div class="esp-card red" data-animate="stagger"><div class="esp-icon red"><i class="fa-solid fa-syringe"></i></div><h3>Angiologia</h3><p>Cuidar do sistema vascular é garantir vida em cada parte</p><button class="btn-outline red ripple">Agendar</button></div>
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-face-smile"></i></div><h3>Dermatologia</h3><p>Saúde e beleza da pele</p><button class="btn-outline blue ripple">Agendar</button></div>
+          <div class="esp-card red" data-animate="stagger"><div class="esp-icon red"><i class="fa-solid fa-brain"></i></div><h3>Psicologia</h3><p>Terapia: autoconhecimento, emoções, resiliência</p><button class="btn-outline red ripple">Agendar</button></div>
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-brain"></i></div><h3>Psiquiatria</h3><p>Tratamento especializado em saúde mental</p><button class="btn-outline blue ripple">Agendar</button></div>
+          <div class="esp-card red" data-animate="stagger"><div class="esp-icon red"><i class="fa-solid fa-diagram-project"></i></div><h3>Neuropsicologia</h3><p>Faça sua avaliação. Cuide da mente.</p><button class="btn-outline red ripple">Agendar Avaliação</button></div>
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-apple-whole"></i></div><h3>Nutrição</h3><p>Alimentação saudável e equilibrada</p><button class="btn-outline blue ripple">Agendar</button></div>
+          <div class="esp-card red" data-animate="stagger"><div class="esp-icon red"><i class="fa-solid fa-bone"></i></div><h3>Ortopedia</h3><p>Cuidados com ossos e articulações</p><button class="btn-outline red ripple">Agendar</button></div>
+          <div class="esp-card blue" data-animate="stagger"><div class="esp-icon blue"><i class="fa-solid fa-briefcase-medical"></i></div><h3>Medicina do Trabalho</h3><p>Exames admissionais e ocupacionais</p><button class="btn-outline blue ripple">Agendar</button></div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: ESPECIALIDADES -->
+
+    <!-- SEÇÃO: PROCEDIMENTOS EM DESTAQUE -->
+    <section class="section" id="procedimentos" data-animate="fade-in">
+      <div class="container space-y-10">
+        <div class="max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">Procedimentos e Tratamentos Especializados</p>
+          <h2 class="section-title">Tecnologia e cuidado para sua saúde</h2>
+        </div>
+        <div class="proc-card" data-animate="slide-left">
+          <div class="proc-img"><div class="img-placeholder">Escleroterapia</div></div>
+          <div class="proc-text">
+            <h3>Escleroterapia</h3>
+            <p>Benefícios da escleroterapia para a saúde das pernas</p>
+            <ul>
+              <li>✓ Melhora da aparência das pernas</li>
+              <li>✓ Reduz desconforto de vasinhos e microvarizes</li>
+              <li>✓ Procedimento rápido, seguro e eficaz</li>
+            </ul>
+            <a class="btn btn-primary ripple" href="https://wa.me/5561993217218">Agendar Consulta</a>
+          </div>
+        </div>
+        <div class="proc-card reverse" data-animate="slide-right">
+          <div class="proc-img"><div class="img-placeholder">Avaliação Neuropsicológica</div></div>
+          <div class="proc-text">
+            <h3>Avaliação Neuropsicológica</h3>
+            <p>Faça sua avaliação Neuropsicológica completa. Cuide da sua mente, fortaleça sua vida.</p>
+            <a class="btn btn-secondary ripple" href="https://wa.me/5561993217218">Agendar Avaliação</a>
+          </div>
+        </div>
+        <div class="proc-card" data-animate="slide-left">
+          <div class="proc-img"><div class="img-placeholder">Exames Cardiológicos</div></div>
+          <div class="proc-text">
+            <h3>Exames Cardiológicos</h3>
+            <p>Consulta completa com Eletrocardiograma</p>
+            <p class="offer">Consulta + ECG por R$ 199,90*</p>
+            <p>Agende sua consulta com um de nossos cardiologistas</p>
+            <a class="btn btn-primary ripple" href="https://wa.me/5561993217218">Agendar Exame</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: PROCEDIMENTOS -->
+
+    <!-- SEÇÃO: CONVÊNIOS -->
+    <section id="convenios" class="section bg-white" data-animate="fade-in">
+      <div class="container space-y-6">
+        <div class="max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">Convênios Aceitos</p>
+          <h2 class="section-title">Aceitamos mais de 40 convênios médicos</h2>
+          <p class="text-body">Facilitamos seu acesso à saúde de qualidade. Trabalhamos com os principais convênios do país.</p>
+        </div>
+        <div class="logo-grid">
+          <div class="logo-box">Unimed</div>
+          <div class="logo-box">Bradesco Saúde</div>
+          <div class="logo-box">Amil</div>
+          <div class="logo-box">SulAmérica</div>
+          <div class="logo-box">NotreDame</div>
+          <div class="logo-box">Hapvida</div>
+          <div class="logo-box">Golden Cross</div>
+          <div class="logo-box">Cassi</div>
+          <div class="logo-box">+30 Convênios</div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/5561993217218" class="btn btn-primary ripple">Consulte seu convênio</a>
+          <span class="text-body">Particular? Oferecemos preços especiais!</span>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: CONVÊNIOS -->
+
+    <!-- SEÇÃO: DIFERENCIAIS -->
+    <section class="section gradient-light" data-animate="fade-in">
+      <div class="container space-y-10">
+        <div class="max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">Por Que Escolher a Biovitta?</p>
+          <h2 class="section-title">Excelência em cada detalhe</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="dif-card" data-animate="stagger"><div class="num">01</div><div class="icon blue"><i class="fa-solid fa-hand-holding-heart"></i></div><h3>Atendimento Humanizado</h3><p>Cuidado com carinho, atenção e respeito.</p></div>
+          <div class="dif-card" data-animate="stagger"><div class="num">02</div><div class="icon red"><i class="fa-solid fa-laptop-medical"></i></div><h3>Tecnologia de Ponta</h3><p>Equipamentos modernos para diagnósticos precisos.</p></div>
+          <div class="dif-card" data-animate="stagger"><div class="num">03</div><div class="icon blue"><i class="fa-solid fa-medal"></i></div><h3>Equipe Qualificada</h3><p>Profissionais experientes e atualizados.</p></div>
+          <div class="dif-card" data-animate="stagger"><div class="num">04</div><div class="icon red"><i class="fa-solid fa-location-dot"></i></div><h3>Fácil Acesso</h3><p>Localização estratégica em Sobradinho/DF.</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: DIFERENCIAIS -->
+
+    <!-- SEÇÃO: GALERIA -->
+    <section id="galeria" class="section bg-[var(--cinza-claro)]" data-animate="fade-in">
+      <div class="container space-y-8">
+        <div class="max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">Conheça Nossa Clínica</p>
+          <h2 class="section-title">Ambiente moderno, confortável e acolhedor</h2>
+        </div>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Todas</button>
+          <button class="filter-btn" data-filter="recepcao">Recepção</button>
+          <button class="filter-btn" data-filter="consultorios">Consultórios</button>
+          <button class="filter-btn" data-filter="equipamentos">Equipamentos</button>
+          <button class="filter-btn" data-filter="exames">Salas de Exame</button>
+        </div>
+        <div class="gallery-grid">
+          <!-- placeholders -->
+          <div class="gallery-item" data-category="recepcao"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=70" alt="Recepção" /></div>
+          <div class="gallery-item" data-category="consultorios"><img src="https://images.unsplash.com/photo-1504439904031-93ded9e6cc59?auto=format&fit=crop&w=800&q=70" alt="Consultório" /></div>
+          <div class="gallery-item" data-category="equipamentos"><img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=800&q=70" alt="Equipamento" /></div>
+          <div class="gallery-item" data-category="exames"><img src="https://images.unsplash.com/photo-1582719478248-54e9f2af67b7?auto=format&fit=crop&w=800&q=70" alt="Sala de exame" /></div>
+          <div class="gallery-item" data-category="consultorios"><img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=70" alt="Consultório" /></div>
+          <div class="gallery-item" data-category="equipamentos"><img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=70" alt="Equipamento" /></div>
+          <div class="gallery-item" data-category="exames"><img src="https://images.unsplash.com/photo-1530023367847-a683933f4177?auto=format&fit=crop&w=800&q=70" alt="Exame" /></div>
+          <div class="gallery-item" data-category="recepcao"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=70" alt="Recepção" /></div>
+        </div>
+      </div>
+      <div id="lightbox" class="lightbox"><span class="close">×</span><img src="" alt="Galeria" /></div>
+    </section>
+    <!-- FIM SEÇÃO: GALERIA -->
+
+    <!-- SEÇÃO: DEPOIMENTOS -->
+    <section class="section" id="depoimentos" data-animate="fade-in">
+      <div class="container space-y-8">
+        <div class="max-w-3xl" data-animate="slide-up">
+          <p class="sup-title">O Que Nossos Pacientes Dizem</p>
+          <h2 class="section-title">Depoimentos reais de quem confia na Biovitta</h2>
+        </div>
+        <div class="carousel" id="testimonialCarousel">
+          <button class="carousel-control prev" aria-label="Anterior">‹</button>
+          <div class="carousel-track">
+            <div class="testimonial-card">
+              <div class="avatar">MS</div>
+              <h4>Maria Silva</h4>
+              <div class="stars">★★★★★</div>
+              <p>Atendimento excepcional! Médicos atenciosos e ambiente muito limpo e organizado.</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="avatar">JS</div>
+              <h4>João Santos</h4>
+              <div class="stars">★★★★★</div>
+              <p>Excelente clínica! Agendamento rápido e atendimento ágil. Recomendo para toda família.</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="avatar">AC</div>
+              <h4>Ana Costa</h4>
+              <div class="stars">★★★★★</div>
+              <p>Melhor clínica da região! Profissionais qualificados e preços justos. Aceitam meu convênio sem burocracia.</p>
+            </div>
+          </div>
+          <button class="carousel-control next" aria-label="Próximo">›</button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: DEPOIMENTOS -->
+
+    <!-- SEÇÃO: LOCALIZAÇÃO E CONTATO -->
+    <section id="contato" class="section bg-[var(--cinza-claro)]" data-animate="fade-in">
+      <div class="container grid gap-8 lg:grid-cols-2">
+        <div class="space-y-4" data-animate="slide-left">
+          <p class="sup-title">Visite Nossa Clínica</p>
+          <h2 class="section-title">Estamos prontos para cuidar de você</h2>
+          <div class="contact-list">
+            <div><span class="icon blue"><i class="fa-solid fa-location-dot"></i></span><div><h4>Endereço</h4><p>Setor Habitacional Contagem - Sobradinho/DF</p></div></div>
+            <div><span class="icon red"><i class="fa-solid fa-phone"></i></span><div><h4>Telefones</h4><p><a href="tel:+5561993217218">(61) 99321-7218</a> | <a href="tel:+556132469494">(61) 3246-9494</a></p></div></div>
+            <div><span class="icon blue"><i class="fa-brands fa-whatsapp"></i></span><div><h4>WhatsApp</h4><p><a href="https://wa.me/5561993217218">Chamar no WhatsApp</a></p></div></div>
+            <div><span class="icon red"><i class="fa-brands fa-instagram"></i></span><div><h4>Instagram</h4><p><a href="https://www.instagram.com/biovittams/">@biovittams</a></p></div></div>
+            <div><span class="icon blue"><i class="fa-solid fa-clock"></i></span><div><h4>Horário</h4><p>Seg a Sex: 8h às 18h | Sáb: 8h às 12h</p></div></div>
+          </div>
+          <div class="flex gap-3">
+            <a class="btn btn-primary ripple" href="https://wa.me/5561993217218">Chamar no WhatsApp</a>
+            <a class="btn btn-secondary ripple" href="https://www.instagram.com/biovittams/">Seguir no Instagram</a>
+          </div>
+        </div>
+        <div class="map-box" data-animate="slide-right">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.1269076424023!2d-47.852680224873225!3d-15.638229084980457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a47f55548513b%3A0x8e26845ba9f725af!2sBiovitta%20Clinica%20Integral!5e0!3m2!1spt-BR!2sbr!4v1764073323692!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn btn-secondary ripple mt-4 inline-flex" href="https://www.google.com/maps/dir/?api=1&destination=Biovitta%20Clinica%20Integral">Ver Rotas no Google Maps</a>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: LOCALIZAÇÃO -->
+
+    <!-- SEÇÃO: CTA FINAL -->
+    <section class="section cta-final" data-animate="fade-in">
+      <div class="container text-center space-y-4">
+        <h2>Cuide da Sua Saúde com Quem Entende</h2>
+        <p>Agende sua consulta hoje mesmo e tenha acesso a atendimento médico de excelência</p>
+        <div class="flex flex-wrap justify-center gap-3 text-white/90">
+          <span>✓ Mais de 40 convênios</span>
+          <span>✓ Equipe especializada</span>
+          <span>✓ Agendamento rápido</span>
+        </div>
+        <a href="https://wa.me/5561993217218" class="btn btn-primary pulse ripple inline-flex items-center gap-2 text-lg px-8 py-4">Agendar Consulta Agora <i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO: CTA FINAL -->
+  </main>
+
+  <!-- SEÇÃO: FOOTER -->
+  <footer class="footer" data-animate="fade-in">
+    <div class="container grid gap-8 lg:grid-cols-4">
+      <div class="space-y-3">
+        <div class="flex items-center gap-2"><div class="logo-mark small"><i class="fa-solid fa-heart-pulse text-white"></i></div><span class="font-display text-white font-semibold">Biovitta</span></div>
+        <p>Clínica integral de medicina e saúde em Sobradinho/DF. Cuidamos de você e sua família com excelência e humanização.</p>
+        <div class="socials"><a href="https://www.instagram.com/biovittams/"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div>
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#convenios">Convênios</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Especialidades</h4>
+        <ul>
+          <li>Clínica Médica</li>
+          <li>Cardiologia</li>
+          <li>Ginecologia</li>
+          <li>Psicologia</li>
+          <li>Dermatologia</li>
+          <li>Nutrição</li>
+          <li><a href="#especialidades">Ver todas →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>📍 Setor Habitacional Contagem, Sobradinho/DF</li>
+          <li>📞 <a href="tel:+5561993217218">(61) 99321-7218</a></li>
+          <li>📞 <a href="tel:+556132469494">(61) 3246-9494</a></li>
+          <li>💬 <a href="https://wa.me/5561993217218">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 Biovitta Medicina & Saúde. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</div>
+  </footer>
+  <!-- FIM SEÇÃO: FOOTER -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Ze+NfVt9oIoYNewc19hXtOD87b5iV/mQJu1nvLKYj1WFJsbgx5caX5/C/PObbIVdQydb9h9t7VDaNw6YI8X2hA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

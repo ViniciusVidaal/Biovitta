@@ -1,0 +1,19 @@
+﻿/* ========== ANIMAÇÕES E ESTADOS ========== */
+[data-animate] { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+[data-animate].visible { opacity: 1; transform: translateY(0); }
+[data-animate="slide-left"].visible { transform: translateX(0); }
+[data-animate="slide-right"] { transform: translateX(40px); }
+[data-animate="slide-right"].visible { transform: translateX(0); }
+[data-animate="slide-left"] { transform: translateX(-40px); }
+[data-animate="fade-in"] { transform: translateY(20px); }
+[data-animate="scale-up"] { transform: scale(0.9); }
+[data-animate="scale-up"].visible { transform: scale(1); }
+[data-animate="stagger"] { transition-delay: var(--delay, 0s); }
+
+/* Hover states */
+.btn:hover, .btn-outline:hover { cursor: pointer; }
+.gallery-item, .esp-card, .sobre-card, .dif-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+
+/* Ripple fix */
+.ripple { position: relative; }
+.ripple:after { pointer-events: none; }
