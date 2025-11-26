@@ -65,3 +65,50 @@
   .float-btn.instagram { bottom: 72px; }
   .float-btn.whatsapp { bottom: 16px; }
 }
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .page-wrapper,
+  main,
+  .section,
+  .container,
+  .header,
+  .hero,
+  #hero,
+  #sobre,
+  #especialidades,
+  #procedimentos,
+  #convenios,
+  #galeria,
+  #depoimentos,
+  #contato {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gallery-grid,
+  .logo-grid,
+  .proc-card,
+  .map-box {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .map-box iframe {
+    width: 100% !important;
+  }
+}
