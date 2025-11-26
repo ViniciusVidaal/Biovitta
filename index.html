@@ -57,6 +57,7 @@
          style="width: 60%; height: 60%; object-fit: contain; display:block; margin:auto;" />
   </a>
 
+  <div class="page-wrapper">
   <!-- SEÇÃO: HEADER -->
   <header class="header fixed inset-x-0 top-0 z-[1000] bg-white shadow-sm transition-all">
     <div class="container flex h-20 items-center justify-between">
@@ -84,13 +85,13 @@
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-header">
-        <button id="closeMobileMenu" aria-label="Fechar menu" class="close-btn">
-          <i class="fa-solid fa-xmark text-2xl"></i>
-        </button>
-      </div>
       <div class="mobile-links">
-        <a href="#hero">Início</a>
+        <div class="mobile-links-header">
+          <a href="#hero">Início</a>
+          <button id="closeMobileMenu" aria-label="Fechar menu" class="close-btn">
+            X
+          </button>
+        </div>
         <a href="#especialidades">Especialidades</a>
         <a href="#convenios">Convênios</a>
         <a href="#galeria">Galeria</a>
@@ -511,6 +512,7 @@
     <div class="footer-bottom">© 2024 Biovitta Medicina & Saúde. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</div>
   </footer>
   <!-- FIM SEÇÃO: FOOTER -->
+  </div>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Ze+NfVt9oIoYNewc19hXtOD87b5iV/mQJu1nvLKYj1WFJsbgx5caX5/C/PObbIVdQydb9h9t7VDaNw6YI8X2hA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="assets/js/animations.js"></script>

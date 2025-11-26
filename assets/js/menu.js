@@ -2,6 +2,7 @@
 // Mobile hamburger toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileMenu = document.getElementById('closeMobileMenu');
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
@@ -15,6 +16,13 @@ if (menuToggle && mobileMenu) {
       menuToggle.classList.remove('active');
     });
   });
+
+  if (closeMobileMenu) {
+    closeMobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.classList.remove('active');
+    });
+  }
 }
 
 // Sticky header shadow on scroll

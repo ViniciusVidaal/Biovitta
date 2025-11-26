@@ -178,6 +178,56 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .float-btn.whatsapp { bottom: 18px; background: #25d366; }
 .float-btn.instagram { bottom: 80px; background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #cc0000, #4f5bd5); }
 
+/* ========== LAYOUT WRAPPER ========== */
+.page-wrapper { width: 100%; }
+@media (min-width: 1024px) {
+  .page-wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ========== MOBILE MENU HEADER ========== */
+.mobile-links-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-links-header a { flex: 1; }
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ========== HERO FULL WIDTH BACKGROUND ========== */
+#hero,
+.hero {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========== MENU TOGGLE VISIBILITY ========== */
+.menu-toggle { display: flex; }
+@media (min-width: 768px) {
+  .menu-toggle { display: none !important; }
+}
+
 /* ========== LOADER ========== */
 .loader-spinner { width: 64px; height: 64px; border-radius: 50%; border: 6px solid #e0e0e0; border-top-color: var(--azul-principal); animation: spin 1s linear infinite; }
 
