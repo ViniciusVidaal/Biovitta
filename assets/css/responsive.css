@@ -114,6 +114,33 @@
 }
 
 @media (max-width: 767px) {
+  /* Header sem scroll interno e com altura flexível */
+  .header {
+    height: auto;
+    min-height: 64px;
+    overflow-y: visible;
+  }
+
+  .header .container {
+    height: auto;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: visible;
+  }
+
+  /* Evitar qualquer wrap estranho que cause mais altura desnecessária */
+  .header .flex {
+    align-items: center;
+  }
+
+  /* O texto da logo pode quebrar linha normalmente */
+  .header .leading-tight p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
   html,
   body {
     width: 100%;
