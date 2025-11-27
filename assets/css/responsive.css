@@ -112,3 +112,54 @@
     width: 100% !important;
   }
 }
+
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .page-wrapper,
+  main,
+  .section,
+  section,
+  .container,
+  .header,
+  #hero,
+  #sobre,
+  #especialidades,
+  #procedimentos,
+  #convenios,
+  #galeria,
+  #depoimentos,
+  #contato {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .gallery-grid,
+  .logo-grid,
+  .proc-card,
+  .map-box {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-box iframe {
+    width: 100% !important;
+  }
+}

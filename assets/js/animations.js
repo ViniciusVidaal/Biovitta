@@ -1,17 +1,27 @@
 ﻿// animations.js
 // Intersection Observer for reveal animations and loader removal
 
-const animateObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, idx) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      entry.target.style.setProperty('--delay', `${idx * 0.1}s`);
-      animateObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.18 });
+const isMobile = window.innerWidth < 768;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-document.querySelectorAll('[data-animate]').forEach((el) => animateObserver.observe(el));
+if (isMobile || prefersReducedMotion) {
+  document.querySelectorAll('[data-animate]').forEach((el, idx) => {
+    el.classList.add('visible');
+    el.style.setProperty('--delay', `${idx * 0.05}s`);
+  });
+} else {
+  const animateObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, idx) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.style.setProperty('--delay', `${idx * 0.1}s`);
+        animateObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  document.querySelectorAll('[data-animate]').forEach((el) => animateObserver.observe(el));
+}
 
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
