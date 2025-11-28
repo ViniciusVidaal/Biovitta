@@ -66,78 +66,32 @@
   .float-btn.whatsapp { bottom: 16px; }
 }
 
-@media (max-width: 767px) {
-  /* 1. Quem manda no scroll é o body */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;  /* UMA barra vertical geral */
-  }
 
-  /* 2. NENHUMA dessas camadas deve ter scroll próprio */
-  .page-wrapper,
-  main,
-  .section,
-  section,
-  .container,
-  .header,
-  .hero,
-  #hero,
-  #sobre,
-  #especialidades,
-  #procedimentos,
-  #convenios,
-  #galeria,
-  #depoimentos,
-  #contato {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;  /* sem barra vertical interna */
-  }
-
-  /* 3. Garantir que o HEADER não tenha scroll próprio e a altura se adapte ao conteúdo */
-  .header {
-    height: auto;
-    min-height: 64px;
-    overflow-y: visible;
-  }
-
-  .header .container {
-    height: auto;
-    align-items: center;
-    overflow: visible;
-  }
-
-  /* 4. Grades e blocos que podem estourar largura */
-  .gallery-grid,
-  .logo-grid,
-  .proc-card,
-  .map-box {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
-  }
-
-  /* 5. Imagens e iframes sempre se ajustando à largura */
-  img,
-  iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .map-box iframe {
-    width: 100% !important;
-  }
-}
 
 @media (max-width: 767px) {
   .stats-card {
     transform: scale(0.5);
     transform-origin: bottom right;
+  }
+}
+/* MOBILE – manter tudo na largura certa e deixar o scroll só com o body */
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* não mexer em overflow-y aqui, deixa o navegador cuidar da rolagem */
+  }
+
+  .page-wrapper,
+  main,
+  section,
+  .section,
+  .container,
+  .header,
+  .hero,
+  #hero {
+    max-width: 100%;
   }
 }
