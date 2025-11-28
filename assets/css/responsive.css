@@ -65,17 +65,22 @@
   .float-btn.instagram { bottom: 72px; }
   .float-btn.whatsapp { bottom: 16px; }
 }
+
 @media (max-width: 767px) {
+  /* 1. Quem manda no scroll é o body */
   html,
   body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: auto;  /* UMA barra vertical geral */
   }
 
+  /* 2. NENHUMA dessas camadas deve ter scroll próprio */
   .page-wrapper,
   main,
   .section,
+  section,
   .container,
   .header,
   .hero,
@@ -90,31 +95,10 @@
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: visible;  /* sem barra vertical interna */
   }
 
-  img,
-  iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .gallery-grid,
-  .logo-grid,
-  .proc-card,
-  .map-box {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .map-box iframe {
-    width: 100% !important;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Header sem scroll interno e com altura flexível */
+  /* 3. Garantir que o HEADER não tenha scroll próprio e a altura se adapte ao conteúdo */
   .header {
     height: auto;
     min-height: 64px;
@@ -124,51 +108,10 @@
   .header .container {
     height: auto;
     align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
     overflow: visible;
   }
 
-  /* Evitar qualquer wrap estranho que cause mais altura desnecessária */
-  .header .flex {
-    align-items: center;
-  }
-
-  /* O texto da logo pode quebrar linha normalmente */
-  .header .leading-tight p {
-    white-space: normal;
-  }
-}
-
-@media (max-width: 767px) {
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  .page-wrapper,
-  main,
-  .section,
-  section,
-  .container,
-  .header,
-  #hero,
-  #sobre,
-  #especialidades,
-  #procedimentos,
-  #convenios,
-  #galeria,
-  #depoimentos,
-  #contato {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
-  }
-
+  /* 4. Grades e blocos que podem estourar largura */
   .gallery-grid,
   .logo-grid,
   .proc-card,
@@ -179,6 +122,7 @@
     overflow-y: visible;
   }
 
+  /* 5. Imagens e iframes sempre se ajustando à largura */
   img,
   iframe {
     max-width: 100%;
@@ -188,5 +132,12 @@
 
   .map-box iframe {
     width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats-card {
+    transform: scale(0.5);
+    transform-origin: bottom right;
   }
 }
